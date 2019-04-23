@@ -7,6 +7,52 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign">签到</string>
+    <string name="integral">积分</string>
+    <string name="Japanese_currency">日币</string>
+    <string name="friendliness">友好度</string>
+    <string name="prestige">威望</string>
+    <string name="edit">编辑</string>
+    <string name="interest_label">兴趣标签</string>
+
+    <string name="follow">关注</string>
+    <string name="edit_information">编辑资料</string>
+    <string name="fans">粉丝</string>
+    <string name="no_answer_get_first_answer">还没有人回答，抢一楼~</string>
+    <string name="answer">答</string>
+    <string name="no_more">没有更多了</string>
+    <string name="more_loading">更多加载中...</string>
+
+
+    <string name="description_define_in_xml"><![CDATA[这是使用定制Header和Footer的第二种方法-Xml中配置\n\n
+        在需要使用特别的Header或者特别配置的页面时候可以使用本方法\n\n
+        本方法的特点：\n
+        1.可以在Androd Studio中的预览窗口预览效果\n
+        2.优先级高于 【全局默认】但是低于 【JavaCode】\n\n
+        代码示例：\n
+        <com.scwang.smartrefresh.SmartRefreshLayout\n
+            \t\tandroid:layout_width="match_parent"\n
+            \t\tandroid:layout_height="match_parent">\n
+            \t<com.scwang.smartrefresh.header.ClassicsHeader\n
+                \t\tandroid:layout_width="match_parent"\n
+                \t\tandroid:layout_height="wrap_content"/>\n
+            \t<TextView\n
+                \t\tandroid:layout_width="match_parent"\n
+                \t\tandroid:layout_height="match_parent"/>\n
+            \t<com.scwang.smartrefresh.footer.ClassicsFooter\n
+                \t\tandroid:layout_width="match_parent"\n
+                \t\tandroid:layout_height="wrap_content"/>\n
+        </com.scwang.smartrefresh.SmartRefreshLayout>\n
+    ]]></string>
+
+
+    <!--main-->
+    <string name="search_text">发现更多干货</string>
+    <string name="home">首页</string>
+    <string name="system">知识体系</string>
+    <string name="wx">公众号</string>
+    <string name="project">项目</string>
+    <string name="person">我的</string>
+
+
 </resources>
