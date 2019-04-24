@@ -1,4 +1,4 @@
-package com.example.myrepository.base;
+package com.example.myrepository.mvp.base;
 
 import android.app.Activity;
 

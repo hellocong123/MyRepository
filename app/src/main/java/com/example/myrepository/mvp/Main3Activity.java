@@ -1,48 +1,41 @@
-package com.example.myrepository.activity;
+package com.example.myrepository.mvp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.myrepository.R;
-import com.example.myrepository.fragment.HomeFragment;
-import com.example.myrepository.fragment.MeFragment;
-import com.example.myrepository.fragment.ProjectFragment;
-import com.example.myrepository.fragment.SystemFragment;
-import com.example.myrepository.fragment.WxFragment;
+import com.example.myrepository.mvp.base.BaseMvpActivity;
+import com.example.myrepository.mvp.base.MainContract;
+import com.example.myrepository.mvp.model.DataModel;
+import com.example.myrepository.mvp.presenter.MainActivityPresenter;
+import com.example.myrepository.mvp.view.HomeFragment;
+import com.example.myrepository.mvp.view.MeFragment;
+import com.example.myrepository.mvp.view.ProjectFragment;
+import com.example.myrepository.mvp.view.SystemFragment;
+import com.example.myrepository.mvp.view.WxFragment;
 import com.example.myrepository.utils.LogUtil;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
-public class Main3Activity extends AppCompatActivity {
+public class Main3Activity extends BaseMvpActivity<MainActivityPresenter> implements MainContract.View {
 
-    Fragment[] mFragments = new Fragment[5];
 
     @BindView(R.id.BottomBnv)
     BottomNavigationView mBottomBnv;
+    private int mPreFragmentPosition = 0;
+    Fragment[] mFragments = new Fragment[5];
+    private MainActivityPresenter mPresenter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-
-        ButterKnife.bind(this);
-
-//        mFragments[0] = new HomeFragment();
-//        mFragments[1] = new SystemFragment();
-//        mFragments[2] = new WxFragment();
-//        mFragments[3] = new ProjectFragment();
-//        mFragments[4] = new MeFragment();
-//
-//        loadMultipleFragment(R.id.frameContain, 0, mFragments);
 
         if (savedInstanceState == null) {
             mFragments[0] = new HomeFragment();
@@ -53,7 +46,7 @@ public class Main3Activity extends AppCompatActivity {
 
             loadMultipleFragment(R.id.frameContain, 0, mFragments);
         } else {
-//            //屏幕翻转后回到当前页面，夜间模式开启后重新登录app
+            //            //屏幕翻转后回到当前页面，夜间模式开启后重新登录app
             mFragments[0] = findFragmentByTag(HomeFragment.class.getName());
             mFragments[1] = findFragmentByTag(SystemFragment.class.getName());
             mFragments[2] = findFragmentByTag(WxFragment.class.getName());
@@ -64,7 +57,42 @@ public class Main3Activity extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main3;
+    }
+
+    @Override
+    protected void inject() {
+
+    }
+
+    @Override
+    protected void initData() {
         initBottomNavigationView();
+    }
+
+    @Override
+    protected MainActivityPresenter getPresenter() {
+        mPresenter = new MainActivityPresenter();
+        return mPresenter;
+    }
+
+    @Override
+    public void showVersionUpdateDialog(String versionDetail) {
+
+    }
+
+    @Override
+    public void downloadApk() {
+
+    }
+
+    @Override
+    public void setApkUrl(String apkUrl) {
+
     }
 
     private int getSelectedItemId(int position) {
@@ -88,7 +116,7 @@ public class Main3Activity extends AppCompatActivity {
     }
 
     private Integer getNavCurrentItem() {
-        LogUtil.d("显示Pre："+mPreFragmentPosition);
+        LogUtil.d("显示Pre：" + mPreFragmentPosition);
         SharedPreferences sp = getSharedPreferences("cache", Context.MODE_PRIVATE);
         return sp.getInt("prePosition", mPreFragmentPosition);
     }
@@ -97,7 +125,6 @@ public class Main3Activity extends AppCompatActivity {
         return getSupportFragmentManager().findFragmentByTag(tag);
     }
 
-    int mPreFragmentPosition = 0;
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -108,7 +135,7 @@ public class Main3Activity extends AppCompatActivity {
         edit.putInt("prePosition", mPreFragmentPosition);
         edit.apply();
 
-        LogUtil.d("保存Pre："+mPreFragmentPosition);
+        LogUtil.d("保存Pre：" + mPreFragmentPosition);
     }
 
     private void initBottomNavigationView() {
@@ -186,4 +213,6 @@ public class Main3Activity extends AppCompatActivity {
         transaction.commitAllowingStateLoss();
 
     }
+
+
 }

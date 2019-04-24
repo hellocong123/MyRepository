@@ -19,4 +19,9 @@ public class Constant {
     public static final int DEFAULT_ARC_WIDTH = 15;
 
     public static final int DEFAULT_WAVE_HEIGHT = 40;
+
+
+
+    //Url
+    public final static String BASE_URL = "https://www.wanandroid.com/";
 }

@@ -1,4 +1,4 @@
-package com.example.myrepository.base;
+package com.example.myrepository.mvp.base;
 
 public interface IPresenter<T extends BaseView> {
 

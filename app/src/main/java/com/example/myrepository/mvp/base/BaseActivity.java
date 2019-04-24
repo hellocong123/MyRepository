@@ -1,7 +1,6 @@
-package com.example.myrepository.base;
+package com.example.myrepository.mvp.base;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 

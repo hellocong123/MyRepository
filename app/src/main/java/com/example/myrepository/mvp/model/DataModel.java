@@ -1,0 +1,34 @@
+package com.example.myrepository.mvp.model;
+
+import com.example.myrepository.mvp.base.NetworkHelper;
+import com.example.myrepository.mvp.http.Api;
+import com.example.myrepository.mvp.http.RetrofitUtils;
+import com.example.myrepository.mvp.model.entity.Articles;
+import com.example.myrepository.mvp.model.entity.BannerData;
+import com.example.myrepository.mvp.model.entity.BaseResponse;
+
+import java.util.List;
+
+import io.reactivex.Observable;
+
+public class DataModel implements NetworkHelper {
+
+
+    private final Api mApi;
+
+    public DataModel() {
+
+        mApi = RetrofitUtils.getInstance().provideApi();
+
+    }
+
+    @Override
+    public Observable<BaseResponse<List<BannerData>>> getBannerData() {
+        return mApi.getBannerData();
+    }
+
+    @Override
+    public Observable<BaseResponse<Articles>> getArticles(int pageNum) {
+        return mApi.getArticles(pageNum);
+    }
+}
