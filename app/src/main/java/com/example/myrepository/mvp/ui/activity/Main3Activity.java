@@ -1,4 +1,4 @@
-package com.example.myrepository.mvp;
+package com.example.myrepository.mvp.ui.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,13 +12,12 @@ import android.view.MenuItem;
 import com.example.myrepository.R;
 import com.example.myrepository.mvp.base.BaseMvpActivity;
 import com.example.myrepository.mvp.base.MainContract;
-import com.example.myrepository.mvp.model.DataModel;
 import com.example.myrepository.mvp.presenter.MainActivityPresenter;
-import com.example.myrepository.mvp.view.HomeFragment;
-import com.example.myrepository.mvp.view.MeFragment;
-import com.example.myrepository.mvp.view.ProjectFragment;
-import com.example.myrepository.mvp.view.SystemFragment;
-import com.example.myrepository.mvp.view.WxFragment;
+import com.example.myrepository.mvp.ui.fragment.HomeFragment;
+import com.example.myrepository.mvp.ui.fragment.MeFragment;
+import com.example.myrepository.mvp.ui.fragment.ProjectFragment;
+import com.example.myrepository.mvp.ui.fragment.SystemFragment;
+import com.example.myrepository.mvp.ui.fragment.WxFragment;
 import com.example.myrepository.utils.LogUtil;
 
 import butterknife.BindView;

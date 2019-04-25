@@ -1,4 +1,4 @@
-package com.example.myrepository.mvp.view;
+package com.example.myrepository.mvp.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

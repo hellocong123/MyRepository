@@ -6,6 +6,8 @@ import com.example.myrepository.mvp.http.RetrofitUtils;
 import com.example.myrepository.mvp.model.entity.Articles;
 import com.example.myrepository.mvp.model.entity.BannerData;
 import com.example.myrepository.mvp.model.entity.BaseResponse;
+import com.example.myrepository.mvp.model.entity.MovieResponse;
+import com.example.myrepository.mvp.model.entity.MovieSubjects;
 
 import java.util.List;
 
@@ -30,5 +32,15 @@ public class DataModel implements NetworkHelper {
     @Override
     public Observable<BaseResponse<Articles>> getArticles(int pageNum) {
         return mApi.getArticles(pageNum);
+    }
+
+    @Override
+    public Observable<MovieResponse<MovieSubjects>> getTheaters() {
+        return mApi.getTheaters();
+    }
+
+    @Override
+    public Observable<MovieResponse<MovieSubjects>> getComingSoon() {
+        return mApi.getComingSoon();
     }
 }

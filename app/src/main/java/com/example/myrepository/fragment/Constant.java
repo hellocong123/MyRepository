@@ -23,5 +23,6 @@ public class Constant {
 
 
     //Url
-    public final static String BASE_URL = "https://www.wanandroid.com/";
+    //public final static String BASE_URL = "https://www.wanandroid.com/";
+    public final static String BASE_URL = "https://api.douban.com/";
 }

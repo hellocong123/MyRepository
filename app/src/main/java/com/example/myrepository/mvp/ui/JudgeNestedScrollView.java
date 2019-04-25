@@ -1,4 +1,4 @@
-package com.example.myrepository.view;
+package com.example.myrepository.mvp.ui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

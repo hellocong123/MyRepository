@@ -23,7 +23,7 @@
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory"
         tools:targetApi="p">
-        <activity android:name=".mvp.Main3Activity">
+        <activity android:name=".mvp.ui.activity.Main3Activity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -31,7 +31,7 @@
 
 
         <!--<android.support.v4.widget.NestedScrollView-->
-        <com.example.myrepository.view.JudgeNestedScrollView
+        <com.example.myrepository.mvp.ui.JudgeNestedScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorGray" />
             </LinearLayout>
-        </com.example.myrepository.view.JudgeNestedScrollView>
+        </com.example.myrepository.mvp.ui.JudgeNestedScrollView>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
     <RelativeLayout
@@ -124,7 +124,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/toolbar_avatar"
                         style="@style/UserTitleAvatar"
-                        android:src="@drawable/timg" />
+                        android:src="@drawable/icon_timg" />
 
                     <TextView
                         android:id="@+id/toolbar_username"

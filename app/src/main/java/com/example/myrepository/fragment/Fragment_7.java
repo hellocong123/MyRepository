@@ -11,11 +11,10 @@ import android.widget.ImageView;
 import com.example.myrepository.BaseFragment;
 import com.example.myrepository.MainActivity;
 import com.example.myrepository.R;
-import com.example.myrepository.view.JudgeNestedScrollView;
+import com.example.myrepository.mvp.ui.JudgeNestedScrollView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
-import com.scwang.smartrefresh.layout.listener.OnMultiPurposeListener;
 import com.scwang.smartrefresh.layout.listener.SimpleMultiPurposeListener;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;

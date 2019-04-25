@@ -1,4 +1,4 @@
-package com.example.myrepository.mvp.view;
+package com.example.myrepository.mvp.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.myrepository.R;
 
-public class SystemFragment extends Fragment {
+public class ProjectFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_system,container,false);
+        return inflater.inflate(R.layout.fragment_project,container,false);
     }
 }
