@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许应用程序访问WIFI网卡的网络信息 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许应用程序完全使用网络 -->
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -17,12 +16,15 @@
         android:appComponentFactory="任意字符"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory"
         tools:targetApi="p">
-        <activity android:name=".小案例.ui控件使用.RecycleView.欢迎页.SplashActivity"></activity>
+        <activity android:name=".小案例.ui控件使用.RecycleView.版本更新.VersionUpdateActivity"></activity>
+        <activity android:name=".小案例.ui控件使用.RecycleView.欢迎页.SplashActivity" />
         <activity android:name=".小案例.ui控件使用.RecycleView.Main4Activity" />
         <activity android:name=".mvp.ui.activity.Main3Activity">
             <intent-filter>

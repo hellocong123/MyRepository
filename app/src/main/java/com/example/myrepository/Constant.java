@@ -25,4 +25,14 @@ public class Constant {
     //public final static String BASE_URL = "https://www.wanandroid.com/";
     public final static String BASE_URL = "https://api.douban.com/";
     public final static String BASE_URL_AiTiTi = "http://app2.aititi.com/";
+
+
+    public static final String UPDATE = "update";
+    public static final String SPNAME = "config";
+
+    public class URL {
+        public static final String BASEURL = "http://10.0.216.174:8080/";
+        public static final String UPDATEURL = BASEURL + "version/info.json";
+
+    }
 }

@@ -1,20 +1,46 @@
 package com.example.myrepository.mvp.ui.fragment.me;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myrepository.R;
+import com.example.myrepository.mvp.base.BaseFragment;
+import com.example.myrepository.小案例.ui控件使用.RecycleView.版本更新.VersionUpdateActivity;
 
-public class MeFragment extends Fragment {
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
-    @Nullable
+public class MeFragment extends BaseFragment {
+
+
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_me, container, false);
+    protected void inject() {
+
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void loadData() {
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.fragment_me;
+    }
+
+
+    @OnClick(R.id.btn_1)
+    public void onViewClicked() {
+        startActivity(new Intent(mActivity, VersionUpdateActivity.class));
     }
 }
