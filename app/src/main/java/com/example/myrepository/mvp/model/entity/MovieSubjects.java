@@ -4,20 +4,20 @@ import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 import java.util.List;
 
-public class MovieSubjects implements MultiItemEntity {
+public class MovieSubjects  {
 
-    public static final int TITLE = 1;
-    public static final int LIST = 2;
-    private int itemType;
-
-    public MovieSubjects(int itemType) {
-        this.itemType = itemType;
-    }
-
-    @Override
-    public int getItemType() {
-        return itemType;
-    }
+//    public static final int TITLE = 1;
+//    public static final int LIST = 2;
+//    private int itemType;
+//
+//    public MovieSubjects(int itemType) {
+//        this.itemType = itemType;
+//    }
+//
+//    @Override
+//    public int getItemType() {
+//        return itemType;
+//    }
 
     /**
      * rating : {"max":10,"average":9.1,"stars":"45","min":0}

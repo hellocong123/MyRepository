@@ -31,7 +31,7 @@
 
 
         <!--<android.support.v4.widget.NestedScrollView-->
-        <com.example.myrepository.mvp.ui.JudgeNestedScrollView
+        <com.example.myrepository.mvp.ui.view.JudgeNestedScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorGray" />
             </LinearLayout>
-        </com.example.myrepository.mvp.ui.JudgeNestedScrollView>
+        </com.example.myrepository.mvp.ui.view.JudgeNestedScrollView>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
     <RelativeLayout

@@ -1,6 +1,6 @@
 package com.example.myrepository.mvp.model;
 
-import com.example.myrepository.mvp.base.NetworkHelper;
+import com.example.myrepository.mvp.http.NetworkHelper;
 import com.example.myrepository.mvp.http.Api;
 import com.example.myrepository.mvp.http.RetrofitUtils;
 import com.example.myrepository.mvp.model.entity.Articles;

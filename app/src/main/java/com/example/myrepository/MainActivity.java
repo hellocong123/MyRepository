@@ -29,6 +29,7 @@ import com.example.myrepository.fragment.Fragment_6;
 import com.example.myrepository.fragment.Fragment_7;
 import com.example.myrepository.fragment.Fragment_8;
 import com.example.myrepository.fragment.Fragment_9;
+import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
@@ -170,6 +171,8 @@ public class MainActivity extends AppCompatActivity
 
 
     private void switchFragment(int index) {
+
+
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 

@@ -6,14 +6,18 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.myrepository.mvp.base.mvp.BaseView;
+import com.orhanobut.logger.Logger;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseFragment extends Fragment implements BaseView{
+public abstract class BaseFragment extends Fragment implements BaseView {
     private Unbinder mBinder;
     protected Activity mActivity;
 
@@ -36,6 +40,7 @@ public abstract class BaseFragment extends Fragment implements BaseView{
         mBinder = ButterKnife.bind(this, view);
         inject();
         initView();
+        Logger.d("hello"+this,getClass().getSimpleName());
         return view;
     }
 

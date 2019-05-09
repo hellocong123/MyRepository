@@ -66,5 +66,7 @@
     <color name="colorBlack">#000000</color>
 
 
+    <color name="error_view_retry">#651FFF</color>
+
 
 </resources>

@@ -10,31 +10,31 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.myrepository.R;
-import com.example.myrepository.mvp.base.BaseMvpActivity;
-import com.example.myrepository.mvp.base.MainContract;
-import com.example.myrepository.mvp.presenter.MainActivityPresenter;
-import com.example.myrepository.mvp.ui.fragment.HomeFragment;
-import com.example.myrepository.mvp.ui.fragment.MeFragment;
-import com.example.myrepository.mvp.ui.fragment.ProjectFragment;
-import com.example.myrepository.mvp.ui.fragment.SystemFragment;
-import com.example.myrepository.mvp.ui.fragment.WxFragment;
+import com.example.myrepository.mvp.base.mvp.BaseMvpActivity;
+import com.example.myrepository.mvp.ui.fragment.home.HomeFragment;
+import com.example.myrepository.mvp.ui.fragment.me.MeFragment;
+import com.example.myrepository.mvp.ui.fragment.project.ProjectFragment;
+import com.example.myrepository.mvp.ui.fragment.system.SystemFragment;
+import com.example.myrepository.mvp.ui.fragment.wx.WxFragment;
 import com.example.myrepository.utils.LogUtil;
 
 import butterknife.BindView;
 
-public class Main3Activity extends BaseMvpActivity<MainActivityPresenter> implements MainContract.View {
+public class Main3Activity extends BaseMvpActivity<MainPresenter> implements MainContract.View {
 
 
     @BindView(R.id.BottomBnv)
     BottomNavigationView mBottomBnv;
     private int mPreFragmentPosition = 0;
     Fragment[] mFragments = new Fragment[5];
-    private MainActivityPresenter mPresenter;
+    private MainPresenter mPresenter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         if (savedInstanceState == null) {
             mFragments[0] = new HomeFragment();
@@ -52,10 +52,7 @@ public class Main3Activity extends BaseMvpActivity<MainActivityPresenter> implem
             mFragments[3] = findFragmentByTag(ProjectFragment.class.getName());
             mFragments[4] = findFragmentByTag(MeFragment.class.getName());
             mBottomBnv.setSelectedItemId(getSelectedItemId(getNavCurrentItem()));
-
         }
-
-
     }
 
     @Override
@@ -74,8 +71,8 @@ public class Main3Activity extends BaseMvpActivity<MainActivityPresenter> implem
     }
 
     @Override
-    protected MainActivityPresenter getPresenter() {
-        mPresenter = new MainActivityPresenter();
+    protected MainPresenter getPresenter() {
+        mPresenter = new MainPresenter();
         return mPresenter;
     }
 
@@ -87,6 +84,8 @@ public class Main3Activity extends BaseMvpActivity<MainActivityPresenter> implem
     @Override
     public void downloadApk() {
 
+//        startActivity();
+//        startActivityForResult();
     }
 
     @Override
@@ -134,7 +133,6 @@ public class Main3Activity extends BaseMvpActivity<MainActivityPresenter> implem
         edit.putInt("prePosition", mPreFragmentPosition);
         edit.apply();
 
-        LogUtil.d("保存Pre：" + mPreFragmentPosition);
     }
 
     private void initBottomNavigationView() {

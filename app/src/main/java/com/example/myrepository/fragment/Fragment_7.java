@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.example.myrepository.BaseFragment;
 import com.example.myrepository.MainActivity;
 import com.example.myrepository.R;
-import com.example.myrepository.mvp.ui.JudgeNestedScrollView;
+import com.example.myrepository.mvp.ui.view.JudgeNestedScrollView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;

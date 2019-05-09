@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import com.example.myrepository.Constant;
+
 public class CircleProgress extends View {
 
     private static final String TAG = CircleProgress.class.getSimpleName();

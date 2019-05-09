@@ -39,4 +39,7 @@ public interface Api {
     @GET("v2/movie/coming_soon")
     Observable<MovieResponse<MovieSubjects>> getComingSoon();
 
+
+
+
 }

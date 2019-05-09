@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.myrepository.mvp.base.mvp.BaseView;
+import com.example.myrepository.utils.ActivityCollector;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -17,6 +20,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         ActivityCollector.getInstance().addActivity(this);
         initView();
         initData();
+
+//        startActivity();
     }
 
     protected abstract int getLayoutId();

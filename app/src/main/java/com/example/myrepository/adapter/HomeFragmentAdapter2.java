@@ -2,6 +2,8 @@ package com.example.myrepository.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -116,9 +118,19 @@ public class HomeFragmentAdapter2<T> extends RecyclerView.Adapter {
             List<MovieSubjects> subjects = (List<MovieSubjects>) o;
             MovieListAdapter adapter = new MovieListAdapter(R.layout.item_movie_list_image, subjects);
             mRecyclerView.setAdapter(adapter);
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));
 
-            mRecyclerView.addItemDecoration(new SpacesItemDecoration(8));
+//            GridLayoutManager manager = new GridLayoutManager(mContext,4);
+            //设置布局管理器
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
+            linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+            mRecyclerView.setLayoutManager(linearLayoutManager);
+
+//            mRecyclerView.addItemDecoration(new SpacesItemDecoration(8));
+
+
+            if (mRecyclerView.getItemDecorationCount() ==0){
+                mRecyclerView.addItemDecoration(new SpacesItemDecoration(8));
+            }
         }
 
 
